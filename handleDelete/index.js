@@ -13,6 +13,7 @@ const personSchema = new dynamoose.Schema({
 const PersonModel = dynamoose.model('People', personSchema);
 
 exports.handler = async (event) => {
+  console.log('INSIDE HANDLER EVENT: ', event);
   console.log('DELETE person EVENT OBJECT: ', event);
 
   let parameters = event.pathParameters;
